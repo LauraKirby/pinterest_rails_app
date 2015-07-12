@@ -1,0 +1,18 @@
+<h1>New Pin</h1>
+<!-- form_for adds the form action and the authenticity token for us.  -->
+<%= form_for @p do |p| %>
+    <p>
+    	<%= p.label "Image Url" %> 
+    	<%= p.text_field :url %>
+    </p>
+
+    <p>
+    	<%= p.label "Comment" %>
+    	<%= p.text_field :url_comment %>
+    </p>
+    
+    <p>
+    	<%= p.submit "New Pin" %>	
+    </p>
+    
+<% end %>
