@@ -1,17 +1,17 @@
 <h1>Show Page</h1>
 
-<% @p do |p| %>
+
     <p>
-    	<img src="<%= p.url %>">
+    	<img src="<%= @p.url %>">
     </p>
 
     <p>
-    	See more: <%= p.url %>
+    	See more: <%= @p.url %>
     </p>
     
     <p>
-    	"<%= p.url_comment %>"
+    	"<%= @p.url_comment %>"
     </p>
-    	
+    	         
+    <%= link_to 'Destroy', @pin, method: :delete, data: {confirm: 'Are you sure you want to delete that delicious pastry?'}%> 
     
-<% end %>

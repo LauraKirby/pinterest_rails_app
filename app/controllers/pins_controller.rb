@@ -8,40 +8,41 @@ class PinsController < ApplicationController
 		@p = Pin.new
 	end
 
-	# def create
-	# 	@p = Pin.create pin_param
-	# 	redirect_to "/pins"
-	# end 
+	def create
+		@p = Pin.create pin_param
+		redirect_to "/pins"
+	end 
 
-	# def update
-	# 	@p = Pin.find_by_id(params[:id])
-	# 	@p.update(pin_params)
-	# 	redirect_to '/pins'
-	# end 
+	def update
+		@p = Pin.find_by_id(params[:id])
+		@p.update(pin_params)
+		redirect_to '/pins'
+	end 
 
-	# def edit 
-	# 	@p = Pin.find_by_id(params[:id])
-	# end 
+	def edit 
+		@p = Pin.find_by_id(params[:id])
+	end 
 
-	# def show
-	# 	@p = Pin.find_by_id(params[:id])
-	# end 
+	def show
+		@p = Pin.find_by_id(params[:id])
+	end 
 
 	def destroy
-		# @p = Pin.find_by_id(params[:id])
-		# @p.destory 
-		# redirect_to '/'
+		@p = Pin.find_by_id(params[:id])
+		@p.destroy 
+		redirect_to '/'
 	end 
 
 
-# # when the user has the opportunity to story data to our server, let's make use the 
-# # user can only access a few things:
+# when the user has the opportunity to story data to our server, let's make use the 
+# user can only access a few things:
 
-# private 
-# 	def pin_params 
-# 		#QUESTION: what is :pin doing here? is it the instance being created or updated?
-# 		params.require(:pin).permit(:url, :url_comment)
-# 	end 
+private 
+	def pin_params 
+		#QUESTION: what is :pin doing here? is it the instance being created or updated?
+		#authentication through the pin due to the form_for?
+		params.require(:pin).permit(:url, :url_comment)
+	end 
 
 
 end
