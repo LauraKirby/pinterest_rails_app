@@ -1,18 +1,27 @@
 <h1>Edit Page</h1>
 
-<%= form_for @p do |p| %>
+<% if @pin.errors.any? %>
+  <% @pin.errors.full_messages.each do |error| %>
     <p>
-    	<%= p.label "Image Url" %> 
-    	<%= p.text_field :url %>
+      <% p "color:red;" %>
+        <%= p error %>
+    </p>
+  <% end %>
+<% end %>
+
+<%= form_for @pin do |f| %>
+    <p>
+    	<%= f.label "Image Url" %> 
+    	<%= f.text_field :url %>
     </p>
 
     <p>
-    	<%= p.label "Comment" %>
-    	<%= p.text_field :url_comment %>
+    	<%= f.label "Comment" %>
+    	<%= f.text_field :url_comment %>
     </p>
     
     <p>
-    	<%= p.submit "New Pin" %>	
+    	<%= f.submit "Update Pin" %>	
     </p>
     
 <% end %>

@@ -1,0 +1,23 @@
+<% @pins.each do |pin| %>
+
+    <%= link_to "Delete", pin_path(pin), method: :delete %>
+    <%= link_to "Edit", edit_pin_path(pin)%>
+    <p>
+    	<img src="<%= pin.url %>">
+    </p>
+
+    <p>
+    	See more: <%= pin.url %>
+    </p>
+    
+    <p>
+    	"<%= pin.url_comment %>"
+    </p>
+
+    <p>
+        <a href="/pins/"></a>
+    </p>
+
+
+
+<% end %>

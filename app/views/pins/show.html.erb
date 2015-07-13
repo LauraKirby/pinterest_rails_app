@@ -2,16 +2,18 @@
 
 
     <p>
-    	<img src="<%= @p.url %>">
+        <img src="<%= @pin.url %>">
     </p>
 
     <p>
-    	See more: <%= @p.url %>
+        See more: <%= @pin.url %>
     </p>
     
     <p>
-    	"<%= @p.url_comment %>"
+        "<%= @pin.url_comment %>"
     </p>
-    	         
+
+   
+                 
     <%= link_to 'Destroy', @pin, method: :delete, data: {confirm: 'Are you sure you want to delete that delicious pastry?'}%> 
     

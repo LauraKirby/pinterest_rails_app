@@ -1,17 +1,4 @@
 <h4>Pins</h4>
+<h2><%= link_to "Add Pin", new_pin_path %></h2>
 
-<% @p.each do |p| %>
-    <p>
-    	<img src="<%= p.url %>">
-    </p>
-
-    <p>
-    	See more: <%= p.url %>
-    </p>
-    
-    <p>
-    	"<%= p.url_comment %>"
-    </p>
-
-
-<% end %>
+ <%= render "form"%>
